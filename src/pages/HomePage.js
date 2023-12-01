@@ -1,3 +1,4 @@
+import "./HomePage.scss";
 function HomePage() {
   return (
     <>
