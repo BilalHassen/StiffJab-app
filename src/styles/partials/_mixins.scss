@@ -1,16 +1,16 @@
-@include mobile {
+@mixin mobile {
   @media (min-width: 0px) {
     @content;
   }
 }
 
-@include tablet {
+@mixin tablet {
   @media (min-width: 768px) {
     @content;
   }
 }
 
-@include desktop {
+@mixin desktop {
   @media (min-width: 1280px) {
     @content;
   }
