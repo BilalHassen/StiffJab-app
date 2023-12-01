@@ -1,0 +1,17 @@
+@include mobile {
+  @media (min-width: 0px) {
+    @content;
+  }
+}
+
+@include tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@include desktop {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
