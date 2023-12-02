@@ -2,13 +2,18 @@
 
 .header {
   display: flex;
+  justify-content: flex-end;
+  justify-content: space-between;
 
   &__title {
     font-weight: 700;
+    font-size: 3rem;
   }
 
   &__nav {
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.5rem;
   }
 
   &__nav-list {
@@ -21,9 +26,24 @@
   &__nav-list-item {
     color: white;
     font-weight: 600;
+    font-size: 1.5rem;
+  }
+
+  &__nav-menu-button {
+    background: none;
+    border: none;
+    position: absolute;
+    right: 0.7rem;
+    top: 0.5rem;
+    font-size: 1.5rem;
   }
 }
 
 h1 span {
   color: white;
+  font-size: 3rem;
+}
+
+.nav-active {
+  display: none;
 }
