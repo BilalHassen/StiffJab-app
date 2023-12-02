@@ -1,0 +1,29 @@
+@use "../../styles/partials/variables" as *;
+
+.header {
+  display: flex;
+
+  &__title {
+    font-weight: 700;
+  }
+
+  &__nav {
+    text-align: center;
+  }
+
+  &__nav-list {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 1rem;
+  }
+
+  &__nav-list-item {
+    color: white;
+    font-weight: 600;
+  }
+}
+
+h1 span {
+  color: white;
+}
