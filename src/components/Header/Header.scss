@@ -1,49 +1,115 @@
 @use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
 
-.header {
+.nav {
   display: flex;
-  justify-content: flex-end;
-  justify-content: space-between;
+  flex-direction: column;
+  padding-top: 1rem;
 
-  &__title {
-    font-weight: 700;
-    font-size: 3rem;
+  @include tablet {
+    justify-content: space-between;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 1.5rem;
   }
 
-  &__nav {
-    justify-content: center;
-    align-items: center;
-    padding-top: 0.5rem;
+  @include desktop {
+    padding-left: 8rem;
+    padding-right: 8rem;
+    padding-top: 3rem;
   }
 
-  &__nav-list {
+  @include tablet {
     display: flex;
-    align-items: center;
-    height: 100%;
-    gap: 1rem;
+    flex-direction: row;
   }
 
-  &__nav-list-item {
+  &__links-container {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+
+    @include tablet {
+      flex-direction: row;
+      gap: 2rem;
+    }
+  }
+
+  &__list-item {
     color: white;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1.5rem;
+    border-radius: 4px;
+    text-align: center;
+    padding-top: 1rem;
+    height: 4rem;
+
+    &:hover {
+      background-color: $boxing-red;
+    }
+
+    @include tablet {
+      font-size: 2rem;
+      border-radius: 100px;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 0.7rem;
+      text-transform: capitalize;
+      &:hover {
+        transition: 0.7s ease;
+      }
+    }
   }
 
-  &__nav-menu-button {
+  &__menu-button {
     background: none;
     border: none;
     position: absolute;
-    right: 0.7rem;
-    top: 0.5rem;
+    right: 1.5rem;
+    top: 1.4rem;
     font-size: 1.5rem;
+
+    @include tablet {
+      display: none;
+    }
+  }
+  &__active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include tablet {
+      display: none;
+    }
   }
 }
 
-h1 span {
-  color: white;
+.nav__title {
+  color: $boxing-red;
   font-size: 3rem;
+  padding-left: 1.6rem;
+  padding-bottom: 1.6rem;
+
+  @include tablet {
+    font-size: 4rem;
+  }
 }
 
-.nav-active {
-  display: none;
+.nav__span {
+  color: white;
+  font-size: 3rem;
+
+  @include tablet {
+    font-size: 4rem;
+  }
 }

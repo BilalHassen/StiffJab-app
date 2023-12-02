@@ -10,12 +10,46 @@ function Header() {
 
   const menuToggle = () => {
     setOpen(!open);
-    menuRef.current.classList.toggle("nav-active");
+    menuRef.current.classList.toggle("nav__active");
   };
 
   return (
     <>
-      <div className="header">
+      <nav className="nav">
+        <div className="nav__title-box">
+          <h1 className="nav__title">
+            <span className="nav__span">STIFF</span>JAB
+          </h1>
+        </div>
+        <button className="nav__menu-button" onClick={menuToggle}>
+          <FontAwesomeIcon
+            icon={faBars}
+            fade
+            style={{ color: "#fa0000" }}
+            size="2x"
+          />
+        </button>
+        <div className="nav__links-container" ref={menuRef}>
+          <ul className="nav__list">
+            <NavLink>
+              <li className="nav__list-item">About</li>
+            </NavLink>
+            <NavLink>
+              <li className="nav__list-item">Contact</li>
+            </NavLink>
+            <NavLink>
+              <li className="nav__list-item">Booking</li>
+            </NavLink>
+          </ul>
+        </div>
+      </nav>
+    </>
+  );
+}
+
+export default Header;
+
+/* <div className="header">
         <h1 className="header__title">
           <span>STIFF</span>JAB
         </h1>
@@ -27,8 +61,8 @@ function Header() {
             size="2x"
           />
         </button>
-        <nav className="header__nav">
-          <ul className="header__nav-list" ref={menuRef}>
+        <nav className="header__nav" ref={menuRef}>
+          <ul className="header__nav-list">
             <NavLink>
               <li className="header__nav-list-item">About</li>
             </NavLink>
@@ -40,9 +74,4 @@ function Header() {
             </NavLink>
           </ul>
         </nav>
-      </div>
-    </>
-  );
-}
-
-export default Header;
+      </div>*/
