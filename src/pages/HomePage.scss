@@ -4,3 +4,16 @@
 h1 {
   color: $boxing-red;
 }
+
+.page__container {
+  background-color: $boxing-black;
+  background-image: url(../assets/images/ali.webp);
+  background-size: cover;
+  height: 100vh;
+  background-position: 35% 100%;
+
+  @include tablet {
+    height: 100vh;
+    background-position: 10% 40%;
+  }
+}
