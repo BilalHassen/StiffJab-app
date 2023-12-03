@@ -4,13 +4,22 @@
   padding-left: 1.6rem;
   padding-right: 1.6rem;
   line-height: 2.7rem;
+  position: absolute;
+  width: 100%;
+  bottom: 37rem;
+
+  @include tablet {
+    padding-left: 4rem;
+  }
+
+  @include desktop {
+    padding-left: 10rem;
+  }
 
   &__text {
-    padding-top: 6rem;
-
+    width: 100%;
     @include tablet {
       padding-top: 2.8rem;
-      padding-left: 3rem;
     }
   }
 
@@ -48,7 +57,6 @@
     color: white;
     font-size: 1.6rem;
     font-weight: 600;
-    width: 60%;
 
     @include tablet {
       font-size: 2rem;
@@ -66,13 +74,24 @@
   &__button {
     border: none;
     background: $boxing-red;
-    height: 2rem;
-    width: 10rem;
+    height: 2.5rem;
+    width: 60%;
     color: $boxing-red;
     font-weight: 600;
     border-radius: 4px;
     cursor: pointer;
-    color: white;
+    color: $boxing-white;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    @include tablet {
+      width: 40%;
+    }
+
+    @include desktop {
+      width: 38%;
+    }
   }
 
   &__image {
@@ -83,6 +102,54 @@
       width: 100%;
       height: 100%;
     }
+  }
+
+  &__icon-container {
+    background-color: $boxing-white;
+    margin-top: 1rem;
+    width: 60%;
+    border-radius: 4px;
+    display: flex;
+    // padding-top: 0.5rem;
+    // padding-bottom: 0.5rem;
+    // padding-left: 1rem;
+    // padding-right: 1rem;
+
+    @include tablet {
+      width: 40%;
+    }
+
+    @include desktop {
+      width: 38%;
+    }
+  }
+
+  &__icon-1,
+  &__icon-2,
+  &__icon-3 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 0.5rem;
+  }
+
+  &__icon-2,
+  &__icon-3 {
+    border-left: 2px solid $boxing-red;
+  }
+
+  &__icon-gloves,
+  &__icon-bag,
+  &__icon-dumbell {
+    width: 30px;
+    height: 30px;
+    color: white;
+  }
+
+  &__icon-text {
+    text-align: center;
   }
 }
 
