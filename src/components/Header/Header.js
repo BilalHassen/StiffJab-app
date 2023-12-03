@@ -15,34 +15,36 @@ function Header() {
 
   return (
     <>
-      <nav className="nav">
-        <div className="nav__title-box">
-          <h1 className="nav__title">
-            <span className="nav__span">STIFF</span>JAB
-          </h1>
-        </div>
-        <button className="nav__menu-button" onClick={menuToggle}>
-          <FontAwesomeIcon
-            icon={faBars}
-            fade
-            style={{ color: "#fa0000" }}
-            size="2x"
-          />
-        </button>
-        <div className="nav__links-container" ref={menuRef}>
-          <ul className="nav__list">
-            <NavLink>
-              <li className="nav__list-item">About</li>
-            </NavLink>
-            <NavLink>
-              <li className="nav__list-item">Contact</li>
-            </NavLink>
-            <NavLink>
-              <li className="nav__list-item">Booking</li>
-            </NavLink>
-          </ul>
-        </div>
-      </nav>
+      <header>
+        <nav className="nav">
+          <div className="nav__title-box">
+            <h1 className="nav__title">
+              <span className="nav__span">STIFF</span>JAB
+            </h1>
+          </div>
+          <button className="nav__menu-button" onClick={menuToggle}>
+            <FontAwesomeIcon
+              icon={faBars}
+              fade
+              style={{ color: "#fa0000" }}
+              size="2x"
+            />
+          </button>
+          <div className="nav__links-container" ref={menuRef}>
+            <ul className="nav__list">
+              <NavLink>
+                <li className="nav__list-item">About</li>
+              </NavLink>
+              <NavLink>
+                <li className="nav__list-item">Contact</li>
+              </NavLink>
+              <NavLink>
+                <li className="nav__list-item">Booking</li>
+              </NavLink>
+            </ul>
+          </div>
+        </nav>
+      </header>
     </>
   );
 }
