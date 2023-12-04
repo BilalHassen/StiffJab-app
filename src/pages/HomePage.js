@@ -15,6 +15,9 @@ function HomePage() {
           dumbellIcon={dumbellIcon}
         />
       </div>
+      <main>
+        <div className="white"></div>
+      </main>
     </>
   );
 }

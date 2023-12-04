@@ -1,4 +1,5 @@
 import "./Hero.scss";
+
 function Hero(props) {
   return (
     <>

@@ -9,11 +9,16 @@ h1 {
   background-color: $boxing-black;
   background-image: url(../assets/images/ali.webp);
   background-size: cover;
-  height: 100vh;
-  background-position: 35% 70%;
+  height: 60vh;
+  background-position: 29% 70%;
 
   @include tablet {
+    height: 70vh;
+    background-position: 100% 40%;
+  }
+
+  @include desktop {
     height: 100vh;
-    background-position: 10% 40%;
+    background-position: 100% 40%;
   }
 }

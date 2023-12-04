@@ -11,6 +11,9 @@ function Header() {
   const menuToggle = () => {
     setOpen(!open);
     menuRef.current.classList.toggle("nav__active");
+    const burgerButton = document
+      .querySelector(".nav__menu-button")
+      .classList.toggle("nav__button-active");
   };
 
   return (
@@ -50,30 +53,3 @@ function Header() {
 }
 
 export default Header;
-
-/* <div className="header">
-        <h1 className="header__title">
-          <span>STIFF</span>JAB
-        </h1>
-        <button className="header__nav-menu-button" onClick={menuToggle}>
-          <FontAwesomeIcon
-            icon={faBars}
-            fade
-            style={{ color: "#fa0000" }}
-            size="2x"
-          />
-        </button>
-        <nav className="header__nav" ref={menuRef}>
-          <ul className="header__nav-list">
-            <NavLink>
-              <li className="header__nav-list-item">About</li>
-            </NavLink>
-            <NavLink>
-              <li className="header__nav-list-item">Contact</li>
-            </NavLink>
-            <NavLink>
-              <li className="header__nav-list-item">Booking</li>
-            </NavLink>
-          </ul>
-        </nav>
-      </div>*/
