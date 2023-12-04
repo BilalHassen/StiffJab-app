@@ -5,6 +5,9 @@ import glovesIcon from "../assets/images/boxing-gloves.png";
 import boxingBagIcon from "../assets/images/boxing.png";
 import dumbellIcon from "../assets/images/weight.png";
 import Main from "../components/Main/Main";
+import boxingFundamentals from "../assets/images/boxing-fundamentals.jpg";
+import boxingSparring from "../assets/images/sparring.jpg";
+import boxingBag from "../assets/images/boxing-bag.jpg";
 function HomePage() {
   return (
     <>
@@ -16,7 +19,11 @@ function HomePage() {
           dumbellIcon={dumbellIcon}
         />
       </div>
-      <Main />
+      <Main
+        boxingFundamentals={boxingFundamentals}
+        boxingSparring={boxingSparring}
+        boxingBag={boxingBag}
+      />
     </>
   );
 }
