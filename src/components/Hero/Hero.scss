@@ -16,21 +16,31 @@
   }
 
   &__text {
-    width: 100%;
+    width: 60%;
 
     @include tablet {
       padding-top: 2.8rem;
+      width: 45%;
+    }
+
+    @include desktop {
+      width: 30%;
+      padding-top: 6rem;
     }
   }
 
   &__title {
-    color: white;
-    font-size: 2.5rem;
-    color: $boxing-red;
+    color: $boxing-white;
+    font-size: 2rem;
 
     @include tablet {
-      padding-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      font-size: 3rem;
+    }
+
+    @include desktop {
       font-size: 4rem;
+      padding-bottom: 1.5rem;
     }
   }
 
@@ -60,7 +70,7 @@
     font-weight: 600;
 
     @include tablet {
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
   }
 
@@ -87,11 +97,14 @@
     margin-bottom: 1rem;
 
     @include tablet {
-      width: 40%;
+      width: 45%;
+      height: 3rem;
     }
 
     @include desktop {
-      width: 30%;
+      width: 48%;
+      font-size: 1.6rem;
+      height: 3.4rem;
     }
   }
 

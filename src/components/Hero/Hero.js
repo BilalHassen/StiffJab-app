@@ -5,13 +5,11 @@ function Hero(props) {
     <>
       <section className="hero">
         <div className="hero__text">
-          <h1 className="hero__title">O.T.S.S</h1>
-          <p className="hero__para">Only The Strong Survive,</p>
-          <p className="hero__para-2">
-            Join <span className="hero__span">STIFF</span>
-            <span className="hero__span-2">JAB</span> training
+          <h1 className="hero__title">Elevate Your skills</h1>
+          <p className="hero__para">
+            Ignite Your Passion and Embrace The Journey to Peak Performance
           </p>
-          <p className="hero__para-2">and join the strong side!</p>
+
           <button className="hero__button">Learn More</button>
         </div>
       </section>
