@@ -1,9 +1,18 @@
 import "./Main.scss";
+import glovesIcon from "../../assets/images/boxing-gloves.png";
+import boxingBagIcon from "../../assets/images/boxing.png";
+import boxerIcon from "../../assets/images/boxer.png";
+import IconContainer from "../IconContainer/IconContainer";
 
 function Main(props) {
   return (
     <main>
       <div className="main">
+        <IconContainer
+          glovesIcon={glovesIcon}
+          boxingBag={boxingBagIcon}
+          boxerIcon={boxerIcon}
+        />
         <div className="main__image-container">
           <div className="main__image-1">
             <img
