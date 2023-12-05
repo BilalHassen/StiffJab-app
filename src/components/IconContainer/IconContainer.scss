@@ -3,15 +3,26 @@
 @use "../../styles/partials/text" as *;
 
 .main {
+  &__icon-wrapper {
+    justify-content: center;
+    display: flex;
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
+
+    @include tablet {
+      width: 100%;
+    }
+  }
   &__icon-container {
     background-color: $boxing-white;
     margin-top: 1rem;
     width: 60%;
     border-radius: 4px;
     display: flex;
+    // box-shadow: 0px 0px 10px 1px $boxing-black;
 
     @include tablet {
-      width: 40%;
+      width: 60%;
     }
 
     @include desktop {
@@ -28,6 +39,12 @@
     align-items: center;
     width: 100%;
     padding-top: 0.5rem;
+    transition: 0.5s ease-in-out;
+
+    &:hover {
+      background-color: $boxing-red;
+      transition: 0.3s ease-in-out;
+    }
   }
 
   &__icon-2,
