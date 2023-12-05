@@ -1,0 +1,70 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/text" as *;
+
+.main {
+  &__icon-wrapper {
+    justify-content: center;
+    display: flex;
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
+
+    @include tablet {
+      width: 100%;
+    }
+  }
+  &__icon-container {
+    background-color: $boxing-white;
+    margin-top: 1rem;
+    width: 100%;
+    border-radius: 4px;
+    display: flex;
+    // box-shadow: 0px 0px 10px 1px $boxing-black;
+
+    @include tablet {
+      width: 90%;
+    }
+
+    @include desktop {
+      width: 80%;
+    }
+  }
+
+  &__icon-1,
+  &__icon-2,
+  &__icon-3 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 0.5rem;
+    transition: 0.5s ease-in-out;
+
+    &:hover {
+      background-color: $boxing-red;
+      transition: 0.3s ease-in-out;
+    }
+  }
+
+  &__icon-2,
+  &__icon-3 {
+    border-left: 2px solid $boxing-red;
+  }
+
+  &__icon-gloves,
+  &__icon-bag,
+  &__icon-dumbell {
+    width: 30px;
+    height: 30px;
+    color: $boxing-white;
+  }
+
+  &__icon-text {
+    text-align: center;
+  }
+
+  &__icon-p {
+    font-family: BebasNeue;
+  }
+}
