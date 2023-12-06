@@ -1,6 +1,28 @@
 import "./OpponentMatch.scss";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 function OpponentMatch() {
+  const [weightClassData, setWeightClassData] = useState([]);
+  const [experienceData, setExperienceData] = useState([]);
+
+  useEffect(() => {
+    axios.get("http://localhost:8080/userdata").then((res) => {
+      console.log(res.data[1][0].weightClasses);
+      let weightClasses = res.data[1][0].weightClasses;
+      setWeightClassData(weightClasses);
+    });
+    axios.get("http://localhost:8080/userdata").then((res) => {
+      let experienceData = res.data[1][1].experience;
+      console.log(experienceData);
+      setExperienceData(experienceData);
+    });
+  }, []);
+
+  const findOpponent = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <>
       <section className="opponent">
@@ -29,15 +51,9 @@ function OpponentMatch() {
             <option value="" disabled selected>
               choose weight class
             </option>
-            <option>super featherweight, 130-134 pounds</option>
-            <option>lightweight, 135-139 pounds</option>
-            <option>super lightweight, 140-146 pounds</option>
-            <option>welterweight, 147-153 pounds</option>
-            <option>super welterweight, 154-159 pounds</option>
-            <option>middleweight, 160-167pounds</option>
-            <option>super middleweight, 168-174 pounds</option>
-            <option>light heavyweight, 175-200 pounds</option>
-            <option>heavyweight, 200+ pounds</option>
+            {weightClassData.map((data) => (
+              <option>{data}</option>
+            ))}
           </select>
 
           <h3>boxer location</h3>
@@ -63,10 +79,11 @@ function OpponentMatch() {
             <option value="" disabled selected>
               experience level
             </option>
-            <option>intermiediate</option>
-            <option>advanced</option>
-            <option>pro</option>
+            {experienceData.map((data) => (
+              <option>{data}</option>
+            ))}
           </select>
+          <button className="opponent__form-button">find opponent</button>
         </form>
       </section>
     </>
