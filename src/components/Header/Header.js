@@ -41,7 +41,7 @@ function Header() {
               <NavLink>
                 <li className="nav__list-item">Contact</li>
               </NavLink>
-              <NavLink>
+              <NavLink to={"/opponent-match"}>
                 <li className="nav__list-item">Booking</li>
               </NavLink>
             </ul>

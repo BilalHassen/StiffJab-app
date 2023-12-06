@@ -3,6 +3,7 @@ import "./App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import Header from "./components/Header/Header";
+import OpponentMatch from "./pages/OpponentMatch/OpponentMatch";
 function App() {
   return (
     <>
@@ -10,6 +11,7 @@ function App() {
         {/* <Header /> */}
         <Routes>
           <Route path="/" element={<HomePage />}></Route>
+          <Route path="/opponent-match" element={<OpponentMatch />}></Route>
         </Routes>
       </BrowserRouter>
     </>
