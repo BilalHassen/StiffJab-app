@@ -1,0 +1,9 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/text" as *;
+
+.opponent__found {
+  color: $boxing-white;
+  font-weight: 600;
+  background-color: black;
+}

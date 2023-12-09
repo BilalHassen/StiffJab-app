@@ -2,6 +2,7 @@ import "./OpponentMatch.scss";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Header from "../../components/Header/Header";
+import OpponentCard from "../../components/OpponentCard/OpponentCard";
 
 const initialValues = {
   name: "",
@@ -157,7 +158,16 @@ function OpponentMatch() {
               find opponent
             </button>
           </form>
-          <section className="opponent__found-container"></section>
+          {opponent.map((opponent) => (
+            <OpponentCard
+              id={opponent.id}
+              name={opponent.name}
+              email={opponent.email}
+              weight={opponent.weight}
+              location={opponent.location}
+              experience={opponent.experience}
+            />
+          ))}
         </section>
       </div>
     </>
