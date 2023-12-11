@@ -3,7 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Header from "../../components/Header/Header";
 import OpponentCard from "../../components/OpponentCard/OpponentCard";
-
+import Footer from "../../components/Footer/Footer";
 const initialValues = {
   name: "",
   email: "",
@@ -82,6 +82,7 @@ function OpponentMatch() {
       <div className="opponent-wrapper">
         <Header />
         <section className="opponent">
+          <h1 className="opponent__title">Find Opponent</h1>
           <form className="opponent__form">
             <h3 className="opponent__form-title">Boxer Name</h3>
             <input
@@ -172,6 +173,7 @@ function OpponentMatch() {
           </section>
         </section>
       </div>
+      <Footer />
     </>
   );
 }
