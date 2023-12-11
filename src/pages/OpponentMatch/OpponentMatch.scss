@@ -21,6 +21,11 @@
   background-color: $boxing-white;
   opacity: 95%;
 
+  &__form {
+    border-bottom: 1.5px solid $boxing-black;
+    margin-bottom: 1.6rem;
+  }
+
   &__title {
     font-size: 2rem;
     font-family: BebasNeue;
@@ -65,7 +70,7 @@
   &__form-button {
     border: none;
     background: $boxing-red;
-    height: 2.5rem;
+    height: 3rem;
     width: 100%;
     color: $boxing-red;
     font-weight: 600;
@@ -74,7 +79,7 @@
     color: $boxing-white;
     font-size: 1.3rem;
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.6rem;
     text-transform: uppercase;
     font-family: BebasNeue;
   }

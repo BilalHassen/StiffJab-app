@@ -1,14 +1,31 @@
 import "./OpponentCard.scss";
-
+import defaultUser from "../../assets/icons/user.png";
 function OpponentCard({ id, name, email, location, weight, experience }) {
   return (
     <>
-      <div className="opponent__found-card">
-        <h4 className="opponent__name">name: {name}</h4>
-        <p className="opponent__email">email: {email}</p>
-        <p className="opponent__email">location: {location}</p>
-        <p className="opponent__email">weight class: {weight}</p>
-        <p className="opponent__email">experience: {experience}</p>
+      <div className="opponent-card">
+        <div className="opponent-card__name-container">
+          <img
+            className="opponent-card__img"
+            src={defaultUser}
+            alt="default user image"
+          ></img>
+          <h4 className="opponent-card__name">{name}</h4>
+        </div>
+        <div className="opponent-card__information-wrapper">
+          <div className="opponent-card__contact-box">
+            <a href={`mailto:${email}`}>
+              <p className="opponent-card__email">{email}</p>
+            </a>
+            <p className="opponent-card__location"> {location}</p>
+          </div>
+          <div className="opponent-card__accolades-box">
+            <p className="opponent-card__weight">weight: {weight}</p>
+            <p className="opponent-card__experience">
+              experience: {experience}
+            </p>
+          </div>
+        </div>
       </div>
     </>
   );
