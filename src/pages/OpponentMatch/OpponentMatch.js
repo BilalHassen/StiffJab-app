@@ -73,7 +73,7 @@ function OpponentMatch() {
           });
       })
       .catch(() => {
-        alert("couldnt add user");
+        alert("couldn't add user");
       });
   };
 
@@ -158,16 +158,18 @@ function OpponentMatch() {
               find opponent
             </button>
           </form>
-          {opponent.map((opponent) => (
-            <OpponentCard
-              id={opponent.id}
-              name={opponent.name}
-              email={opponent.email}
-              weight={opponent.weight}
-              location={opponent.location}
-              experience={opponent.experience}
-            />
-          ))}
+          <section className="opponent__found">
+            {opponent.map((opponent) => (
+              <OpponentCard
+                id={opponent.id}
+                name={opponent.name}
+                email={opponent.email}
+                weight={opponent.weight}
+                location={opponent.location}
+                experience={opponent.experience}
+              />
+            ))}
+          </section>
         </section>
       </div>
     </>
