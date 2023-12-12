@@ -5,8 +5,8 @@
   padding-left: 1.6rem;
   padding-right: 1.6rem;
   line-height: 2.7rem;
-  padding-top: 4rem;
-
+  padding-bottom: 1.6rem;
+  padding-top: 1.6rem;
   @include tablet {
     padding-left: 4rem;
   }
@@ -16,7 +16,7 @@
   }
 
   &__text {
-    width: 60%;
+    width: 50%;
 
     @include tablet {
       padding-top: 2.8rem;
@@ -31,7 +31,7 @@
 
   &__title {
     color: $boxing-white;
-    font-size: 2rem;
+    font-size: 1.8rem;
 
     @include tablet {
       padding-bottom: 1rem;
@@ -44,29 +44,10 @@
     }
   }
 
-  &__span {
-    color: $boxing-red;
-    font-size: 1.6rem;
-    font-weight: 700;
-
-    @include tablet {
-      font-size: 2.5rem;
-    }
-  }
-
-  &__span-2 {
-    font-size: 1.6rem;
-    font-weight: 700;
-
-    @include tablet {
-      font-size: 2.5rem;
-    }
-  }
-
   &__para,
   &__para-2 {
     color: $boxing-white;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     font-weight: 600;
 
     @include tablet {
