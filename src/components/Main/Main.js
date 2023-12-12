@@ -21,16 +21,13 @@ function Main(props) {
               alt="boxing fundamentals img"
             ></img>
             <div className="main__image-text">
-              <div className="main__image-title">STEP: 1</div>
+              <div className="main__image-title">STEP 1:</div>
               <p className="main__fundamentals-para">
-                We begin with the basics and drill the fundamentals as this is
-                paramount to any boxers success. The fundamentals encompass all
-                essential techniques including stance, throwing basic punches,
-                and defensive maneuvers. Drilling these fundamentals allow
-                students to develop good boxing habbits and ensures a solid
-                understanding of the of the sports core principles. In addition,
-                mastering these fundamentals also helps to minimize the risk of
-                injury.
+                Input your information into the website and we will match you
+                with potential sparring oppoenents in the Ontario region.
+                Whether you're a seasoned boxer or an itermediate fighter the
+                platform will connect you with like minded individuals to
+                sharpen your skills.
               </p>
             </div>
           </div>
@@ -41,16 +38,13 @@ function Main(props) {
               alt="boxing bag img"
             ></img>
             <div className="main__image-text">
-              <div className="main__image-title">STEP: 2</div>
+              <div className="main__image-title">STEP 2:</div>
               <p className="main__heavy-bag-para">
-                We introduce punching bag training to the students, I will offer
-                a myriad of different bags to work different skills. Among
-                these, the heavy bag will be the focus of our training as it
-                stands out as an important tool for developing striking power
-                and teachnique. The heavy bag engages the entire body, demanding
-                correct technique, endurance, and power. The heavy bag is also
-                the key to developing the knockout! power that many students
-                desire.
+                Our platforms advanced algorithms will match you with potential
+                opponents based on the following accolades weight class,
+                location, and experience. Sit back and we will expedite the
+                process of finding the perfect sparring partner so you can
+                improve or prepare for an upcoming fight.
               </p>
             </div>
           </div>
@@ -61,15 +55,13 @@ function Main(props) {
               alt="boxing sparring img"
             ></img>
             <div className="main__image-text">
-              <div className="main__image-title">STEP: 3</div>
+              <div className="main__image-title">STEP 3:</div>
               <p className="main__sparring-para">
-                We introduce the art of sparring one of the most important tools
-                in any combat training routine. It important to have developed
-                your skills and have adequate levels of fitness to engage in
-                sparring. Sparring is where all of the students boxing skills
-                will be tested as this is the stage closest to a real fight.
-                Sparring will serve as the litmus test for one's conditioning,
-                cardio, and endurance.
+                Discover your perfect sparring match effortlessly all the heavy
+                lifting is done, we provide you with tailored results. All
+                that's left to do is schedule a training session that works for
+                you. Take the next step and elevate your training and experience
+                the thrill of competition.
               </p>
             </div>
           </div>
