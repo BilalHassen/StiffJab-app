@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <>
-      <footer className="footer">
+      <footer className="footer footer1">
         <div className="footer__text-container">
           <h1 className="footer__title">
             <span className="footer__span">STIFF</span>JAB

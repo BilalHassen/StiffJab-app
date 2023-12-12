@@ -36,13 +36,13 @@ function Header() {
           <div className="nav__links-container" ref={menuRef}>
             <ul className="nav__list">
               <NavLink>
-                <li className="nav__list-item">About</li>
+                <li className="nav__list-item">ABOUT</li>
               </NavLink>
               <NavLink>
-                <li className="nav__list-item">Contact</li>
+                <li className="nav__list-item">CONTACT</li>
               </NavLink>
               <NavLink to={"/opponent-match"}>
-                <li className="nav__list-item">Booking</li>
+                <li className="nav__list-item">FIND</li>
               </NavLink>
             </ul>
           </div>
