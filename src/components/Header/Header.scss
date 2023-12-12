@@ -1,5 +1,6 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/text" as *;
 
 .nav {
   display: flex;
@@ -57,6 +58,11 @@
     text-align: center;
     padding-top: 1rem;
     height: 4rem;
+    text-transform: uppercase;
+
+    @include tablet {
+      font-size: 1rem;
+    }
 
     &:hover {
       background-color: $boxing-red;
