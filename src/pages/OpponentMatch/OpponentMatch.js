@@ -17,6 +17,7 @@ function OpponentMatch() {
   const [experienceData, setExperienceData] = useState([]);
   const [opponent, setOpponent] = useState([]);
   const [values, setValues] = useState(initialValues);
+  const [flexClass, setFlexClass] = useState(false);
 
   useEffect(() => {
     axios
@@ -54,6 +55,8 @@ function OpponentMatch() {
   const findOpponent = (e) => {
     e.preventDefault();
 
+    setFlexClass(true);
+
     axios
       .post("http://localhost:8080/userdata", values)
       .then((res) => {
@@ -79,9 +82,10 @@ function OpponentMatch() {
 
   return (
     <>
-      <div className="opponent-wrapper">
+      <div className={flexClass ? "dynamic-wrapper" : "opponent-wrapper"}>
         <Header />
-        <section className="opponent">
+
+        <section className={flexClass ? "opponent-dynamic" : "opponent"}>
           <form className="opponent__form">
             <div className="opponent__form-1">
               <h1 className="opponent__title">Find Opponent</h1>
@@ -167,18 +171,20 @@ function OpponentMatch() {
               </div>
             </div>
           </form>
-          <section className="opponent__found">
-            {opponent.map((opponent) => (
-              <OpponentCard
-                id={opponent.id}
-                name={opponent.name}
-                email={opponent.email}
-                weight={opponent.weight}
-                location={opponent.location}
-                experience={opponent.experience}
-              />
-            ))}
-          </section>
+          {opponent.length > 0 && (
+            <section className="opponent__found">
+              {opponent.map((opponent) => (
+                <OpponentCard
+                  id={opponent.id}
+                  name={opponent.name}
+                  email={opponent.email}
+                  weight={opponent.weight}
+                  location={opponent.location}
+                  experience={opponent.experience}
+                />
+              ))}
+            </section>
+          )}
         </section>
       </div>
       <Footer />
