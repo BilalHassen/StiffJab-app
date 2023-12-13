@@ -21,9 +21,11 @@ function Header() {
       <header>
         <nav className="nav">
           <div className="nav__title-box">
-            <h1 className="nav__title">
-              <span className="nav__span">STIFF</span>JAB
-            </h1>
+            <Link to="/">
+              <h3 className="nav__title">
+                <span className="nav__span">STIFF</span>JAB
+              </h3>
+            </Link>
           </div>
           <button className="nav__menu-button" onClick={menuToggle}>
             <FontAwesomeIcon

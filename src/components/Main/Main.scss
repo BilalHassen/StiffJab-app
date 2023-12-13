@@ -8,19 +8,28 @@
   @include tablet {
     padding-left: 4rem;
     padding-right: 4rem;
+    padding-bottom: 4rem;
   }
 
   @include desktop {
     padding-left: 10rem;
     padding-right: 10rem;
+    padding-bottom: 10rem;
+    padding-top: 4rem;
   }
 
   &__boxing-fundamentals {
-    height: 200px;
+    height: 180px;
     width: 100%;
     border-radius: 4px;
 
     @include tablet {
+      height: 120px;
+      width: 100%;
+    }
+
+    @include desktop {
+      height: 180px;
       width: 100%;
     }
   }
@@ -52,10 +61,16 @@
     &__image-container {
       display: flex;
       gap: 2rem;
+
+      @include desktop {
+      }
     }
 
     &__image-1 {
       width: 100%;
+
+      @include desktop {
+      }
     }
   }
 }
