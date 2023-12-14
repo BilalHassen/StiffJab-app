@@ -1,0 +1,11 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/text" as *;
+@use "../../styles/partials/variables" as *;
+
+.contact-header {
+  background-color: black;
+  background-image: url(../../assets/images/ali.webp);
+  background-size: cover;
+  background-position: center;
+  height: 30vh;
+}
