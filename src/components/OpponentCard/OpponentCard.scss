@@ -106,7 +106,11 @@
       align-items: center;
       justify-content: center;
       font-size: 1.4rem;
-      width: 120%;
+      width: 110%;
+    }
+
+    @include desktop {
+      width: 100%;
     }
 
     &:hover {
@@ -142,7 +146,11 @@
       height: 4rem;
       align-items: center;
       justify-content: center;
-      width: 120%;
+      width: 110%;
+    }
+
+    @include desktop {
+      width: 100%;
     }
 
     &:hover {

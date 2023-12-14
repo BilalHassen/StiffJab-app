@@ -55,6 +55,7 @@ function OpponentMatch() {
   const findOpponent = (e) => {
     e.preventDefault();
 
+    // toggles classes for css when cards are present
     setFlexClass(true);
 
     axios
