@@ -37,7 +37,7 @@ function Header() {
           </button>
           <div className="nav__links-container" ref={menuRef}>
             <ul className="nav__list">
-              <NavLink>
+              <NavLink to={"/about-page"}>
                 <li className="nav__list-item">ABOUT</li>
               </NavLink>
               <NavLink to={"/contact-page"}>

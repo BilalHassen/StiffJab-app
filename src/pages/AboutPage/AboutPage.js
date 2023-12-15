@@ -1,0 +1,11 @@
+import "./AboutPage.scss";
+
+function AboutPage() {
+  return (
+    <>
+      <h1>ABOUT PAGE</h1>
+    </>
+  );
+}
+
+export default AboutPage;
