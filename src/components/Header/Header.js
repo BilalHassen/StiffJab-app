@@ -40,7 +40,7 @@ function Header() {
               <NavLink>
                 <li className="nav__list-item">ABOUT</li>
               </NavLink>
-              <NavLink>
+              <NavLink to={"/contact-page"}>
                 <li className="nav__list-item">CONTACT</li>
               </NavLink>
               <NavLink to={"/opponent-match"}>
