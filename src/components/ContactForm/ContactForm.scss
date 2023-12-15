@@ -142,4 +142,9 @@
       width: 50%;
     }
   }
+  &-error {
+    color: $boxing-red;
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
 }
