@@ -10,10 +10,10 @@ function ContactPage() {
       </div>
       <section className="contact">
         <div className="contact__form-container">
-          <h1>this is the contact page</h1>
           <ContactForm />
         </div>
       </section>
+      <Footer />
     </>
   );
 }
