@@ -9,6 +9,7 @@ import boxingFundamentals from "../assets/images/boxing-fundamentals.jpg";
 import boxingSparring from "../assets/images/sparring.jpg";
 import boxingBag from "../assets/images/boxing-bag.jpg";
 import Footer from "../components/Footer/Footer";
+import About from "../components/AboutComponent/About";
 function HomePage() {
   return (
     <>
@@ -25,6 +26,7 @@ function HomePage() {
         boxingSparring={boxingSparring}
         boxingBag={boxingBag}
       />
+      <About />
       <Footer />
     </>
   );
