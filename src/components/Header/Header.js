@@ -38,7 +38,7 @@ function Header() {
           </button>
           <div className="nav__links-container" ref={menuRef}>
             <ul className="nav__list">
-              <Link to="about__page" smooth={true} duration={1500}>
+              <Link to="about" smooth={true} duration={1500}>
                 <li className="nav__list-item">ABOUT</li>
               </Link>
               <NavLink to={"/contact-page"}>
