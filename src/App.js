@@ -5,6 +5,7 @@ import HomePage from "./pages/HomePage";
 import Header from "./components/Header/Header";
 import OpponentMatch from "./pages/OpponentMatch/OpponentMatch";
 import ContactPage from "./pages/ContactPage/ContactPage";
+
 function App() {
   return (
     <>

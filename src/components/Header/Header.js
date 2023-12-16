@@ -1,8 +1,9 @@
 import "./Header.scss";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { useState, useRef } from "react";
+import { Link } from "react-scroll";
 function Header() {
   const menuRef = useRef();
   // state to track if the menu is open or not
@@ -21,11 +22,11 @@ function Header() {
       <header>
         <nav className="nav">
           <div className="nav__title-box">
-            <Link to="/">
+            <NavLink to="/">
               <h3 className="nav__title">
                 <span className="nav__span">STIFF</span>JAB
               </h3>
-            </Link>
+            </NavLink>
           </div>
           <button className="nav__menu-button" onClick={menuToggle}>
             <FontAwesomeIcon
@@ -37,9 +38,9 @@ function Header() {
           </button>
           <div className="nav__links-container" ref={menuRef}>
             <ul className="nav__list">
-              <NavLink>
+              <Link to="about" smooth={true} duration={1500}>
                 <li className="nav__list-item">ABOUT</li>
-              </NavLink>
+              </Link>
               <NavLink to={"/contact-page"}>
                 <li className="nav__list-item">CONTACT</li>
               </NavLink>
