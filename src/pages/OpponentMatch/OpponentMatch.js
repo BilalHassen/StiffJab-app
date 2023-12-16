@@ -18,6 +18,7 @@ function OpponentMatch() {
   const [opponent, setOpponent] = useState([]);
   const [values, setValues] = useState(initialValues);
   const [flexClass, setFlexClass] = useState(false);
+  const [formErrors, setFormErrors] = useState({});
 
   useEffect(() => {
     axios
@@ -54,31 +55,58 @@ function OpponentMatch() {
 
   const findOpponent = (e) => {
     e.preventDefault();
-
     // toggles classes for css when cards are present
-    setFlexClass(true);
 
-    axios
-      .post("http://localhost:8080/userdata", values)
-      .then((res) => {
-        console.log(res.data.id);
-        let newUserId = res.data.id;
-        return axios
-          .get(`http://localhost:8080/userdata/${newUserId}`)
-          .then((res) => {
-            console.log(res.data);
-            let opponentsData = res.data;
-            console.log("from line 61", newUserId);
-            let filterOpponents = opponentsData.filter(
-              (opponent) => opponent.id !== newUserId
-            );
-            console.log({ filterOpponents });
-            setOpponent(filterOpponents);
-          });
-      })
-      .catch(() => {
-        alert("couldn't add user");
-      });
+    const formErrorsObject = validateForm(values);
+    setFormErrors(formErrorsObject);
+
+    if (Object.keys(formErrorsObject).length === 0) {
+      axios
+        .post("http://localhost:8080/userdata", values)
+        .then((res) => {
+          console.log(res.data.id);
+          let newUserId = res.data.id;
+          return axios
+            .get(`http://localhost:8080/userdata/${newUserId}`)
+            .then((res) => {
+              console.log(res.data);
+              let opponentsData = res.data;
+              console.log("from line 61", newUserId);
+              let filterOpponents = opponentsData.filter(
+                (opponent) => opponent.id !== newUserId
+              );
+              console.log({ filterOpponents });
+              setOpponent(filterOpponents);
+              setFlexClass(true);
+            });
+        })
+        .catch(() => {
+          alert("couldn't add user");
+        });
+    }
+  };
+
+  const validateForm = (formValues) => {
+    // empty errors object to return
+    const errors = {};
+    // check if the input of the forms are empty
+    if (!formValues.name) {
+      errors.name = "Name is required";
+    }
+    if (!formValues.email) {
+      errors.email = "Email is required";
+    }
+    if (!formValues.location) {
+      errors.location = "Location is required";
+    }
+    if (!formValues.weightClass) {
+      errors.weightClass = "Weightclass is required";
+    }
+    if (!formValues.experience) {
+      errors.experience = "Experience is required";
+    }
+    // return the updated errors object
+    return errors;
   };
 
   return (
@@ -99,6 +127,7 @@ function OpponentMatch() {
                 value={values.name}
                 placeholder="name..."
               />
+              <p className="opponent__form-error">{formErrors.name}</p>
               <h3 className="opponent__form-title">Boxer Email</h3>
               <input
                 className="opponent__form-email"
@@ -108,6 +137,7 @@ function OpponentMatch() {
                 onChange={handleInputChange}
                 placeholder="email..."
               />
+              <p className="opponent__form-error">{formErrors.email}</p>
               <h3 className="opponent__form-title">Boxer Weight Class</h3>
               <select
                 className="opponent__form-weightClass"
@@ -126,6 +156,7 @@ function OpponentMatch() {
                   </option>
                 ))}
               </select>
+              <p className="opponent__form-error">{formErrors.weightClass}</p>
             </div>
             <div className="opponent__form-2">
               <h3 className="opponent__form-title">boxer location</h3>
@@ -142,7 +173,7 @@ function OpponentMatch() {
                 </option>
                 <option>Ontario</option>
               </select>
-
+              <p className="opponent__form-error">{formErrors.location}</p>
               <h3 className="opponent__form-title">boxer experience level</h3>
               <select
                 className="opponent__form-experience"
@@ -161,6 +192,7 @@ function OpponentMatch() {
                   </option>
                 ))}
               </select>
+              <p className="opponent__form-error">{formErrors.experience}</p>
               <br></br>
               <div className="opponent__button-container">
                 <button

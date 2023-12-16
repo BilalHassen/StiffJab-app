@@ -19,7 +19,7 @@
   padding-right: 1.6rem;
   border-radius: 4px;
   padding-bottom: 1.6rem;
-  margin-top: 5rem;
+  margin-top: 1.6rem;
   background-color: $boxing-white;
   opacity: 95%;
 
@@ -170,6 +170,12 @@
       margin-top: 3rem;
       height: 4rem;
     }
+  }
+
+  &__form-error {
+    color: $boxing-red;
+    font-weight: 600;
+    font-size: 1.2rem;
   }
 }
 
