@@ -78,8 +78,7 @@
       width: 50%;
       margin-top: 5rem;
       @include desktop {
-        margin-top: 3.25rem;
-        margin-top: 5rem;
+        padding-top: 2.2rem;
       }
     }
   }
@@ -96,6 +95,7 @@
 
     @include desktop {
       font-size: 2.8rem;
+      padding-bottom: 1rem;
     }
   }
 
@@ -169,6 +169,7 @@
     @include desktop {
       margin-top: 3rem;
       height: 4rem;
+      font-size: 1.8rem;
     }
   }
 

@@ -15,12 +15,13 @@
     padding-bottom: 4rem;
     padding-left: 3rem;
     padding-right: 3rem;
+    border-bottom: 1px solid $boxing-black;
   }
 
   @include desktop {
     padding-left: 6rem;
     padding-right: 6rem;
-    padding-top: 2.4rem;
+    padding-top: 1rem;
     padding-bottom: 5rem;
     gap: 4rem;
   }
@@ -39,7 +40,7 @@
 
     @include desktop {
       padding-left: 6rem;
-      padding-top: 2.4rem;
+      padding-top: 2.8rem;
     }
   }
 
@@ -57,7 +58,7 @@
     }
 
     @include desktop {
-      font-size: 1.8rem;
+      font-size: 2rem;
     }
   }
 
@@ -71,6 +72,10 @@
     height: 3rem;
     font-size: 1.2rem;
     padding-left: 0.5rem;
+
+    @include desktop {
+      padding-left: 1rem;
+    }
 
     &::placeholder {
       color: $boxing-black;
@@ -96,6 +101,10 @@
 
     @include tablet {
       height: 9.7rem;
+    }
+
+    @include desktop {
+      padding-left: 1rem;
     }
   }
 
@@ -128,7 +137,8 @@
     }
 
     @include desktop {
-      width: 35%;
+      width: 40%;
+      height: 3.5rem;
       font-size: 1.8rem;
     }
   }
