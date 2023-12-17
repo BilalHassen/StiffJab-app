@@ -4,7 +4,7 @@ import AboutMeImg from "../../assets/images/aboutMeImage.jpeg";
 function About() {
   return (
     <>
-      <section className="about">
+      <section className="about" id="about">
         <div className="about__header-container">
           <h1 className="about__header">About Me</h1>
         </div>
