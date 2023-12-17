@@ -2,9 +2,9 @@ import "./Header.scss";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Link } from "react-scroll";
-
+import { useNavigate, useLocation } from "react-router-dom";
 function Header() {
   const menuRef = useRef();
   // state to track if the menu is open or not
@@ -16,6 +16,33 @@ function Header() {
     const burgerButton = document
       .querySelector(".nav__menu-button")
       .classList.toggle("nav__button-active");
+  };
+
+  const navigate = useNavigate();
+  const location = useLocation();
+  const homePage = location.pathname === "/";
+
+  const scrollToAbout = () => {
+    if (homePage) {
+      document.getElementById("about").scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    } else {
+      //navigate back the homepage
+      navigate("/");
+      // then scroll to about
+      // set timeout is used to ensure the page changes then scrolls
+      setTimeout(() => {
+        const aboutElement = document.getElementById("about");
+        if (aboutElement) {
+          aboutElement.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      }, 0);
+    }
   };
 
   return (
@@ -39,9 +66,19 @@ function Header() {
           </button>
           <div className="nav__links-container" ref={menuRef}>
             <ul className="nav__list">
-              <Link to="about" smooth={true} duration={1500}>
-                <li className="nav__list-item"> ABOUT</li>
-              </Link>
+              {homePage ? (
+                <Link to="about" smooth={true} duration={1500}>
+                  <li className="nav__list-item" onClick={scrollToAbout}>
+                    ABOUT
+                  </li>
+                </Link>
+              ) : (
+                <NavLink to="/" smooth={true} duration={1500}>
+                  <li className="nav__list-item" onClick={scrollToAbout}>
+                    ABOUT
+                  </li>
+                </NavLink>
+              )}
               <NavLink to={"/contact-page"}>
                 <li className="nav__list-item">CONTACT</li>
               </NavLink>
