@@ -24,10 +24,10 @@ function Main(props) {
               <div className="main__image-title">STEP 1:</div>
               <p className="main__fundamentals-para">
                 Input your information into the website and we will match you
-                with potential sparring oppoenents in the Ontario region.
-                Whether you're a seasoned boxer or an itermediate fighter the
-                platform will connect you with like minded individuals to
-                sharpen your skills.
+                with potential sparring opponents in the Ontario region. Whether
+                you're a seasoned boxer or an intermediate fighter, the platform
+                will connect you with like-minded individuals to sharpen your
+                skills.
               </p>
             </div>
           </div>
@@ -40,8 +40,8 @@ function Main(props) {
             <div className="main__image-text">
               <div className="main__image-title">STEP 2:</div>
               <p className="main__heavy-bag-para">
-                Our platforms advanced algorithms will match you with potential
-                opponents based on the following accolades weight class,
+                Our platform's advanced algorithms will match you with potential
+                opponents based on the following accolades, weight class,
                 location, and experience. Sit back and we will expedite the
                 process of finding the perfect sparring partner so you can
                 improve or prepare for an upcoming fight.

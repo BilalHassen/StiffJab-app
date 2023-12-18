@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Header from "../../components/Header/Header";
 import OpponentCard from "../../components/OpponentCard/OpponentCard";
 import Footer from "../../components/Footer/Footer";
+// initial values of the form inputs
 const initialValues = {
   name: "",
   email: "",
@@ -20,12 +21,13 @@ function OpponentMatch() {
   const [flexClass, setFlexClass] = useState(false);
   const [formErrors, setFormErrors] = useState({});
 
+  // get initial data from the server
   useEffect(() => {
     axios
       .get("http://localhost:8080/userdata")
       .then((res) => {
-        // console.log(res.data[1][0].weightClasses);
         let weightClasses = res.data[1][0].weightClasses;
+        // update the data with data for weight classes dropdown
         setWeightClassData(weightClasses);
       })
       .catch((err) => {
@@ -35,7 +37,7 @@ function OpponentMatch() {
       .get("http://localhost:8080/userdata")
       .then((res) => {
         let experienceData = res.data[1][1].experience;
-        // console.log(experienceData);
+        // update the data with data for experience levels dropdown
         setExperienceData(experienceData);
       })
       .catch((err) => {
@@ -43,39 +45,38 @@ function OpponentMatch() {
       });
   }, []);
 
-  useEffect(() => {
-    console.log(opponent);
-  }, [opponent]);
-
+  // tracks the changes in the input fields of the forms
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setValues({ ...values, [name]: value });
   };
-  // console.log(values);
 
   const findOpponent = (e) => {
     e.preventDefault();
-    // toggles classes for css when cards are present
-
+    // validate the form inputs using the validate form function assign it to a variable
     const formErrorsObject = validateForm(values);
+    // up date with the validation results
     setFormErrors(formErrorsObject);
 
+    // check if there are any errors by checking the
+    // the length of the formErrorsObject keys
     if (Object.keys(formErrorsObject).length === 0) {
+      // make the post request with the values from the form given there are no errors
       axios
         .post("http://localhost:8080/userdata", values)
         .then((res) => {
           console.log(res.data.id);
+          // get the newely created id from the new user and assing it
           let newUserId = res.data.id;
+          // make a axios get call with the new user id
           return axios
             .get(`http://localhost:8080/userdata/${newUserId}`)
             .then((res) => {
-              console.log(res.data);
               let opponentsData = res.data;
-              console.log("from line 61", newUserId);
+              // remove the new user from a potential list of opponents
               let filterOpponents = opponentsData.filter(
                 (opponent) => opponent.id !== newUserId
               );
-              console.log({ filterOpponents });
               setOpponent(filterOpponents);
               setFlexClass(true);
             });
@@ -204,20 +205,18 @@ function OpponentMatch() {
               </div>
             </div>
           </form>
-          {opponent.length > 0 && (
-            <section className="opponent__found">
-              {opponent.map((opponent) => (
-                <OpponentCard
-                  id={opponent.id}
-                  name={opponent.name}
-                  email={opponent.email}
-                  weight={opponent.weight}
-                  location={opponent.location}
-                  experience={opponent.experience}
-                />
-              ))}
-            </section>
-          )}
+          <section className="opponent__found">
+            {opponent.map((opponent) => (
+              <OpponentCard
+                id={opponent.id}
+                name={opponent.name}
+                email={opponent.email}
+                weight={opponent.weight}
+                location={opponent.location}
+                experience={opponent.experience}
+              />
+            ))}
+          </section>
         </section>
       </div>
       <Footer />

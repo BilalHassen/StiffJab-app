@@ -19,17 +19,17 @@ function About() {
 
           <div className="about__text-container">
             <p className="about__paragraph">
-              Over the past decade of training in boxing, I've come across a
-              growing challenge in finding formidable sparring partners who
-              offer both a robust challenge and an effective workout, in both my
-              local gym and others within the Ontario region, the sparring
-              partners consist of individuals who are merely training at the
-              facility. When looking to improve my skills or prepare for an
-              upcoming fight, the need for a sparring partner that pushes me
-              past my physical limits is paramount. All be it, there are no
-              rests in a boxing match. This is reason I created the stiffjab app
-              to easily find good sparring partners and help you focus on
-              training.
+              Over the past decade of training boxing, I've encountered a
+              growing challenge in securing formidable sparring partners who
+              offer both a robust challenge and an effective workout. Whether In
+              my local gym or others across Ontario, the sparring partners
+              consist of individuals who are merely training at the facility.
+              When seeking to improve my skills or prepare for an upcoming
+              fight, the necessity for a sparring partner capable of pushing me
+              beyond my physical limits becomes crucial. In the relentless pace
+              of a boxing match there are no breaks. This is precisely why I
+              developed the StiffJab app - a tool to effortlessly connect you
+              with skilled sparring partners.
             </p>
           </div>
         </div>
