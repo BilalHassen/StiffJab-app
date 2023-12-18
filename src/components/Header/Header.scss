@@ -1,0 +1,137 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/text" as *;
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+
+  @include tablet {
+    justify-content: space-between;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 1.5rem;
+  }
+
+  @include desktop {
+    padding-left: 8rem;
+    padding-right: 8rem;
+    padding-top: 3rem;
+  }
+
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__links-container {
+    display: none;
+    transition: 0.5s ease-in-out;
+
+    @include tablet {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__list {
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      width: 100%;
+    }
+
+    @include tablet {
+      flex-direction: row;
+      gap: 2rem;
+      background-color: none;
+    }
+  }
+
+  &__list-item {
+    color: white;
+    font-weight: 700;
+    font-size: 1.5rem;
+    border-radius: 4px;
+    text-align: center;
+    padding-top: 1rem;
+    height: 4rem;
+    text-transform: uppercase;
+
+    @include tablet {
+      font-size: 1rem;
+    }
+
+    &:hover {
+      background-color: $boxing-red;
+    }
+
+    @include tablet {
+      font-size: 2rem;
+      border-radius: 100px;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 0.7rem;
+      text-transform: capitalize;
+      &:hover {
+        transition: 0.7s ease;
+      }
+    }
+  }
+
+  &__menu-button {
+    background: none;
+    border: none;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.4rem;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease-in-out;
+
+    @include tablet {
+      display: none;
+    }
+  }
+  &__active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease-in-out;
+    background-color: black;
+    opacity: 0.9;
+    border-radius: 4px;
+    position: absolute;
+    top: 4.5rem;
+    width: 100%;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__button-active {
+    transform: rotate(90deg);
+    transition: transform 0.3s ease-in-out;
+  }
+}
+
+.nav__title {
+  color: $boxing-red;
+  font-size: 3rem;
+  padding-left: 1.6rem;
+
+  @include tablet {
+    font-size: 4.5rem;
+  }
+}
+
+.nav__span {
+  color: white;
+  font-size: 3rem;
+
+  @include tablet {
+    font-size: 4.5rem;
+  }
+}

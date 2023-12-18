@@ -1,0 +1,161 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/text" as *;
+@use "../../styles/partials/variables" as *;
+
+.contact__form {
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
+  padding-bottom: 1.6rem;
+
+  @include tablet {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    border-bottom: 1px solid $boxing-black;
+  }
+
+  @include desktop {
+    padding-left: 6rem;
+    padding-right: 6rem;
+    padding-top: 1rem;
+    padding-bottom: 5rem;
+    gap: 4rem;
+  }
+
+  &-header {
+    font-size: 2.4rem;
+    padding-bottom: 1rem;
+    padding-top: 1.6rem;
+    font-family: BebasNeue;
+    padding-left: 1.6rem;
+
+    @include tablet {
+      padding-left: 3rem;
+      padding-bottom: 0rem;
+    }
+
+    @include desktop {
+      padding-left: 6rem;
+      padding-top: 2.8rem;
+      font-size: 2.8rem;
+    }
+  }
+
+  &-title {
+    font-size: 1.6rem;
+    padding-bottom: 0.7rem;
+    padding-top: 1.6rem;
+    font-family: BebasNeue;
+    font-weight: 400;
+    padding-left: 0.4rem;
+
+    @include tablet {
+      padding-bottom: 1rem;
+      padding-top: 0.7rem;
+    }
+
+    @include desktop {
+      font-size: 2rem;
+    }
+  }
+
+  &-name,
+  &-email {
+    width: 100%;
+    border-radius: 200px;
+    appearance: none;
+    border-style: none;
+    border: 1px solid $boxing-black;
+    height: 3rem;
+    font-size: 1.2rem;
+    padding-left: 0.5rem;
+
+    @include desktop {
+      padding-left: 1rem;
+    }
+
+    &::placeholder {
+      color: $boxing-black;
+      font-weight: 600;
+    }
+  }
+
+  &-message {
+    width: 100%;
+    border-radius: 10px;
+    appearance: none;
+    border-style: none;
+    border: 1px solid $boxing-black;
+    height: 8rem;
+    font-size: 1.2rem;
+    padding-left: 0.5rem;
+    padding-top: 0.2rem;
+
+    &::placeholder {
+      color: $boxing-black;
+      font-weight: 600;
+    }
+
+    @include tablet {
+      height: 9.7rem;
+    }
+
+    @include desktop {
+      padding-left: 1rem;
+    }
+  }
+
+  @include tablet {
+    &-button-container {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  &-button {
+    border: none;
+    background: $boxing-red;
+    height: 3rem;
+    width: 100%;
+    color: $boxing-red;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    color: $boxing-white;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    margin-bottom: 1.6rem;
+    text-transform: uppercase;
+    font-family: BebasNeue;
+
+    @include tablet {
+      width: 40%;
+      font-size: 1.6rem;
+    }
+
+    @include desktop {
+      width: 40%;
+      height: 3.5rem;
+      font-size: 1.8rem;
+    }
+  }
+
+  @include tablet {
+    &-box {
+      width: 50%;
+    }
+
+    &-box1 {
+      width: 50%;
+    }
+  }
+  &-error {
+    color: $boxing-red;
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+}
