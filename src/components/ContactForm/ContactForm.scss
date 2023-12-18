@@ -15,7 +15,6 @@
     padding-bottom: 4rem;
     padding-left: 3rem;
     padding-right: 3rem;
-    border-bottom: 1px solid $boxing-black;
   }
 
   @include desktop {
@@ -32,6 +31,12 @@
     padding-top: 1.6rem;
     font-family: BebasNeue;
     padding-left: 1.6rem;
+    transition: transform 500ms ease;
+    width: fit-content;
+
+    &:hover {
+      transform: scale(1.05);
+    }
 
     @include tablet {
       padding-left: 3rem;
@@ -131,6 +136,12 @@
     margin-bottom: 1.6rem;
     text-transform: uppercase;
     font-family: BebasNeue;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      background-color: rgb(120, 0, 0);
+      transition: 0.3s ease-in-out;
+    }
 
     @include tablet {
       width: 40%;

@@ -65,15 +65,15 @@
     border-radius: 4px;
     transition: 0.7s ease-in-out;
 
+    &:hover {
+      transition: 0.7s ease-in-out;
+      transform: rotate(-2deg);
+    }
+
     @include tablet {
       margin-top: 0.5rem;
       height: 200px;
       transition: 0.7s ease-in-out;
-
-      &:hover {
-        transition: 0.7s ease-in-out;
-        transform: rotate(-7deg);
-      }
     }
 
     @include desktop {

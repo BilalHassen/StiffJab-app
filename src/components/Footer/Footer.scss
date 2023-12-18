@@ -28,6 +28,11 @@
 
   &__title {
     color: $boxing-red;
+    transition: transform 500ms ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 
   &__span {
@@ -67,6 +72,12 @@
   &__twitter-icon {
     height: 20px;
     width: 20px;
+
+    transition: transform 1s ease-in-out;
+
+    &:hover {
+      transform: rotate(-360deg);
+    }
 
     @include tablet {
       width: 30px;

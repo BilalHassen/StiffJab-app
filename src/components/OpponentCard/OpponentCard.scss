@@ -17,12 +17,12 @@
     padding-top: 2.4rem;
     padding-bottom: 2rem;
     justify-content: flex-start;
-    gap: 2rem;
+    gap: 1rem;
     overflow-x: auto;
   }
 
   @include desktop {
-    gap: 4rem;
+    gap: 2rem;
     padding-bottom: 2rem;
   }
 }
@@ -36,9 +36,11 @@
 
   @include tablet {
     padding-bottom: 1.6rem;
-    width: 100%;
     white-space: nowrap;
     padding-top: 1.6rem;
+    width: 100%;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
   // flex container for persons name
@@ -109,11 +111,11 @@
       align-items: center;
       justify-content: center;
       font-size: 1.4rem;
-      width: 110%;
+      width: 120%;
     }
 
     @include desktop {
-      width: 100%;
+      width: 150%;
     }
 
     &:hover {
@@ -149,11 +151,11 @@
       height: 4rem;
       align-items: center;
       justify-content: center;
-      width: 110%;
+      width: 120%;
     }
 
     @include desktop {
-      width: 100%;
+      width: 150%;
     }
 
     &:hover {

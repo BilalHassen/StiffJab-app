@@ -87,6 +87,12 @@
     font-size: 2rem;
     font-family: BebasNeue;
     padding-top: 1.6rem;
+    transition: transform 500ms ease;
+    width: fit-content;
+
+    &:hover {
+      transform: scale(1.05);
+    }
 
     @include tablet {
       font-size: 2.4rem;
@@ -160,9 +166,16 @@
     margin-bottom: 1.6rem;
     text-transform: uppercase;
     font-family: BebasNeue;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      background-color: rgb(120, 0, 0);
+      transition: 0.3s ease-in-out;
+    }
 
     @include tablet {
-      margin-top: 4.3rem;
+      margin-top: 3rem;
+      height: 3.5rem;
       width: 40%;
     }
 
