@@ -4,10 +4,10 @@ StiffJab the project I created for my capstone project at BrainStation, it is a 
 
 
 ### front-end installation 
-1. Clone the repository: git clone https://github.com/BilalHassen/boxing-app.git
-2. Navigate into the project directory: cd boxing-app
-3. Install dependencies using: npm install
-4. Start the development server: npm start
+1. Clone the repository: `git clone https://github.com/BilalHassen/boxing-app.git`
+2. Navigate into the project directory: `cd boxing-app`
+3. Install dependencies using: `npm install`
+4. Start the development server: `npm start`
 
 
 
